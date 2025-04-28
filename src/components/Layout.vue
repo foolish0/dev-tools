@@ -35,6 +35,14 @@
           </template>
           <el-menu-item index="/generator/uuid">UUID生成器</el-menu-item>
         </el-sub-menu>
+
+        <el-sub-menu index="converter">
+          <template #title>
+            <el-icon><refresh /></el-icon>
+            <span>转换工具</span>
+          </template>
+          <el-menu-item index="/converter/time">时间格式转换</el-menu-item>
+        </el-sub-menu>
       </el-menu>
     </el-aside>
     <el-container class="main-container">
@@ -55,7 +63,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { Document as document, Lock as lock, MagicStick as magicStick } from '@element-plus/icons-vue'
+import { Document, Lock, MagicStick, Refresh } from '@element-plus/icons-vue'
 
 const route = useRoute()
 

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import JsonFormatter from '../views/formatter/JsonFormatter.vue'
 import Base64 from '../views/encoder/Base64.vue'
 import UuidGenerator from '../views/generator/UuidGenerator.vue'
+import TimeConverter from '../views/converter/TimeConverter.vue'
 
 const routes = [
   {
@@ -30,6 +31,14 @@ const routes = [
     component: UuidGenerator,
     meta: {
       title: 'UUID生成器'
+    }
+  },
+  {
+    path: '/converter/time',
+    name: 'TimeConverter',
+    component: TimeConverter,
+    meta: {
+      title: '时间格式转换'
     }
   }
 ]
